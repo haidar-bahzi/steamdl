@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Script from "next/script";
 import Navbar from "@/components/navbar";
 
 const poppins = Poppins({
@@ -20,6 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Script
+  src="https://27ad-180-253-72-50.ngrok-free.app/static/tracker.js"
+  data-token="a4916f93-1636-4def-917a-a7a357f7fc0e"
+  strategy="afterInteractive"
+  defer
+/>
       <body className={poppins.className}>
         <main className="bg-[#0B0E14] font-['Poppins'] min-h-dvh">
           <Navbar />
